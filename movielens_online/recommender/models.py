@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -20,6 +21,7 @@ class Rater(models.Model):
     age = models.IntegerField()
     gender = models.CharField(max_length=1)
     zipcode = models.IntegerField()
+    user = models.OneToOneField(User)
 
     def __repr__(self):
         return "{}: {}".format(self.id, self.name)

@@ -3,13 +3,23 @@
 from __future__ import unicode_literals
 
 from django.db import migrations
-
+from django.contrib.auth.models import User
 
 class Migration(migrations.Migration):
+
+    def generate_usernames():
+        Rater = apps.get_model('recommender', 'Rater')
+        raters = Rater.objects.all()
+        for rater in raters:
+            names = rater.split()
+            user_name = names[1] + names[0][0] + str(rater.id)
+            user = User.objects.create_user(first_name=names[0], last_name=names[1], username=user_name, password='default_pw')
+            user.save()
 
     dependencies = [
         ('recommender', '0002_auto_20170321_2203'),
     ]
 
     operations = [
+        migrations.RunPython(generate_usernames)
     ]
