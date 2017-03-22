@@ -32,3 +32,9 @@ body{
   background-color: #abcdef;
   font-family: Helvetica;
 }
+
+footer{
+  position: absolute;
+  width: auto;
+  margin:auto;
+}
