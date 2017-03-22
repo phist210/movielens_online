@@ -1,15 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset='utf-8'>
     <title>{{ r.name }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'recommender/stylin_profilin.css' %}" />
   </head>
   <body>
     {% if r %}
     <h1>{{ r.name }}</h1>
     <p>Age: {{ r.age }}</p>
     <p>Total movies rated: {{ movies_reviewed }}</p>
-    <h3>Movie List</h3>
+    <h3>{{ r.name }} has rated:</h3>
       <ul>
       {% for movie in top10 %}
         <li>{{ movie.rating }}/5 - <a href="{% url 'recommender:movie_profile' movie.movie.id %}">{{ movie.movie.title }}</a></li>
@@ -18,5 +20,6 @@
     {% else %}
     <p>Nothing to show!</p>
     {% endif %}
+    <footer><a href='/recommender'>Index</a></footer>
   </body>
 </html>

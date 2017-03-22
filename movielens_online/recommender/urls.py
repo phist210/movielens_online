@@ -7,7 +7,7 @@ from django.contrib import admin
 app_name = 'recommender'
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.index, name='recommender'),
     url(r'^top_20/$', views.top_20, name='top_20'),
     url(r'^movie_list/$', views.movie_list, name='movie_list'),
     url(r'^movie_list/(?P<movie_id>[0-9]+)/', views.movie_profile, name='movie_profile'),
