@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>{{m.title}}</title>
+  </head>
+  <body>
+    <ul>
+      <li>Movie ID: {{ m.id }}</li>
+      <li>Release Date: {{ m.release_date }}</li>
+      <li>Average Rating: {{ avg_rating }}/5 ({{rating_count}} ratings)</li>
+    </ul>
+    {% for rate in all_movie_rating %}
+      <li><a href="{% url 'recommender:rater_profile' rate.rater.id %}">{{ rate.rater.name }}</a>
+        {{rate.rating}}/5</li>
+    {% endfor %}
+
+  </body>
+</html>

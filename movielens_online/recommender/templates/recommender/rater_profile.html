@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>{{ r.name }}</title>
+  </head>
+  <body>
+    {% if r %}
+    <h1>{{ r.name }}</h1>
+    <p>Age: {{ r.age }}</p>
+    <p>Total movies rated: {{ movies_reviewed }}</p>
+    <h3>Movie List</h3>
+      <ol>
+      {% for movie in top10 %}
+
+        <li>{{ movie.rating }}/5 - <a href="{% url 'recommender:movie_profile' movie.movie.id %}">{{ movie }}</a></li>
+      {% endfor %}
+      </ol>
+    {% else %}
+    <p>Nothing to show!</p>
+    {% endif %}
+  </body>
+</html>

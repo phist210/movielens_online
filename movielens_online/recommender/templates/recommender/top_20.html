@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>TOP 20</title>
+  </head>
+  <body>
+    {% if top20 %}
+      <ul>
+      {% for movie in top20 %}
+        <li>
+          <a href="{% url 'recommender:movie_profile' movie.id %}">{{ movie }}</a>
+        </li>
+      {% endfor %}
+    {% else %}
+      <p>Nothing to show.</p>
+    {% endif %}
+      </ul>
+  </body>
+</html>

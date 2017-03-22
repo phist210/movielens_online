@@ -36,7 +36,7 @@ class Rating(models.Model):
     timstamp = models.IntegerField()
 
     def __repr__(self):
-        return "{}".format(self.title)
+        return "{}".format(self.movie)
 
     def __str__(self):
         return self.__repr__()
