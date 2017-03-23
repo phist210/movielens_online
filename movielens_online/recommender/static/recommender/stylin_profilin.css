@@ -1,30 +1,25 @@
-nav {
-    width: 50%;
+/* unvisited link */
+a:link {
+  color: red;
+  text-decoration: none;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
+/* visited link */
+a:visited {
+  text-decoration: none;
+  color: green;
 }
 
-nav ul li {
-    list-style: none;
-    flex-grow: 1;
-    text-align: center;
-
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+  color: white;
 }
 
-nav ul li a {
-    display: block;
-}
-
-nav ul li a:hover {
-    display: block;
-    font-size: 20px;
-    transition: 0.1s;
-    t
+/* selected link */
+a:active {
+  text-decoration: none;
+  color: blue;
 }
 
 body{
@@ -33,8 +28,55 @@ body{
   font-family: Helvetica;
 }
 
+#welcome{
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 1;
+  bottom: 1;
+  left: 0;
+  width: 400px;
+  height:40px;
+  background-color: white;
+}
+
+#main {
+    list-style-type: none;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 1;
+    left: 1;
+    padding: 0;
+    overflow: hidden;
+    background-color: auto;
+}
+
+li.main {
+    float: left;
+}
+
+li.main a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.main a:hover {
+    background-color: #111;
+}
+
 footer{
   position: absolute;
   width: auto;
   margin:auto;
+  overflow: auto;
+  position: static;
+  top: 1;
+  right: 0;
+  bottom: 0;
+  margin-left: 45%;
 }

@@ -16,10 +16,10 @@
     <h3>Reviews</h3>
     <ol>
     {% for rate in all_movie_rating %}
-      <li><a href="{% url 'recommender:rater_profile' rate.rater.user.id %}">{{ rate.rater.name }}</a>
+      <li><a href="{% url 'recommender:rater_profile' rate.id %}">q</a>
         {{rate.rating}}/5</li>
     {% endfor %}
     </ol>
-    <footer><a href='/recommender'>Index</a></footer>
+    <footer><a href='/recommender'>Return to index</a></footer>
   </body>
 </html>

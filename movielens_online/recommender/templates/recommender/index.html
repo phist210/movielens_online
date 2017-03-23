@@ -5,15 +5,18 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'recommender/stylin_profilin.css' %}" />
-    <title>INDEX</title>
+    <title>{{user}}'s Profile Page</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href='movie_list'>All movies</a></li>
-        <li><a href='rater_list'>All raters</a></li>
-        <li><a href='top_20'>Top 20 movies</a></li>
+      <ul id='main'>
+        <li class="main"><a target='_blank' href='movie_list'>Movies</a></li>
+        <li class="main"><a target='_blank' href='rater_list'>Raters</a></li>
+        <li class="main"><a target='_blank' href='top_20'>Top 20</a></li>
+        <div></div>
       </ul>
-    </nav>
+    <div id="welcome">
+      <p>Welcome, {{user}}</p>
+    </div>
+
   </body>
 </html>

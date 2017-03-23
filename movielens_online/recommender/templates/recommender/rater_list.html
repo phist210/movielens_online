@@ -12,13 +12,13 @@
       <ul>
       {% for user in users %}
         <li>
-          <a href="{% url 'recommender:rater_profile' user.id %}">{{ user }}</a>
+          <a href="{% url 'recommender:rater_profile' rate.id %}">{{ user }}</a>
         </li>
       {% endfor %}
       </ul>
     {% else %}
       <p>Nothing to show.</p>
     {% endif %}
-    <footer><a href='/recommender'>Index</a></footer>
+    <footer><a href='/recommender'>Return to index</a></footer>
   </body>
 </html>

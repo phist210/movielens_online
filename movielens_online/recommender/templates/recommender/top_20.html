@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'recommender/stylin_profilin.css' %}" />
   </head>
   <body>
+    <h1>Hey, look! The top 20 best movies right now!</h1>
     {% if top20 %}
       <ul>
       {% for movie in top20 %}
@@ -18,6 +19,6 @@
       <p>Nothing to show.</p>
     {% endif %}
       </ul>
-    <footer><a href='/recommender'>Index</a></footer>
+    <footer><a href='/recommender'>Return to index</a></footer>
   </body>
 </html>
