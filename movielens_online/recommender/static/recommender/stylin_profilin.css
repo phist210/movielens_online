@@ -1,13 +1,13 @@
 /* unvisited link */
 a:link {
-  color: red;
+  color: #123456;
   text-decoration: none;
 }
 
 /* visited link */
 a:visited {
   text-decoration: none;
-  color: green;
+  color: black;
 }
 
 /* mouse over link */
@@ -40,17 +40,16 @@ body{
   background-color: white;
 }
 
-#main {
-    list-style-type: none;
+ul.toaster {
     position: fixed;
     margin: auto;
     top: 0;
     right: 0;
-    bottom: 1;
-    left: 1;
+    bottom: 0;
+    left: 0;
     padding: 0;
     overflow: hidden;
-    background-color: auto;
+    background-color: grey;
 }
 
 li.main {
@@ -59,7 +58,7 @@ li.main {
 
 li.main a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

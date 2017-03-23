@@ -5,18 +5,21 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'recommender/stylin_profilin.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>{{user}}'s Profile Page</title>
   </head>
   <body>
-      <ul id='main'>
-        <li class="main"><a target='_blank' href='movie_list'>Movies</a></li>
-        <li class="main"><a target='_blank' href='rater_list'>Raters</a></li>
-        <li class="main"><a target='_blank' href='top_20'>Top 20</a></li>
-        <div></div>
-      </ul>
-    <div id="welcome">
+    <div class="jumbotron text-center">
       <p>Welcome, {{user}}</p>
     </div>
+        <ul class='toaster'>
+          <li class="main"><a target='_blank' href='movie_list'>Movies</a></li>
+          <li class="main"><a target='_blank' href='rater_list'>Raters</a></li>
+          <li class="main"><a target='_blank' href='top_20'>Top 20</a></li>
+        </ul>
 
   </body>
 </html>

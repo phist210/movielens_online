@@ -5,6 +5,10 @@
     <meta charset='utf-8'>
     <title>{{ r.name }}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'recommender/stylin_profilin.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
     {% if r %}
@@ -20,6 +24,13 @@
     {% else %}
     <p>Nothing to show!</p>
     {% endif %}
+        <ul id='main'>
+          <li class="main"><a href='/recommender/'>Home</a></li>
+          <li class="main"><a href='/recommender/movie_list'>Movies</a></li>
+          <li class="main"><a href='/recommender/rater_list'>Raters</a></li>
+          <li class="main"><a href='/recommender/top_20'>Top 20</a></li>
+          <div></div>
+        </ul>
     <footer><a href='/recommender'>Return to index</a></footer>
   </body>
 </html>

@@ -5,21 +5,32 @@
     <meta charset='utf-8'>
     <title>{{m.title}}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'recommender/stylin_profilin.css' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
     <h1>{{ m.title }}</h1>
     <ul>
-      <li>Movie ID: {{ m.id }}</li>
-      <li>Release Date: {{ m.release_date }}</li>
-      <li>Average Rating: {{ avg_rating }}/5 ({{rating_count}} ratings)</li>
+      <li>Movie ID: <b>{{ m.id }}</b></li>
+      <li>Release Date: <b>{{ m.release_date }}</b></li>
+      <li>Average Rating: <b>{{ avg_rating }}/5</b> ({{rating_count}} ratings)</li>
     </ul>
     <h3>Reviews</h3>
     <ol>
     {% for rate in all_movie_rating %}
-      <li><a href="{% url 'recommender:rater_profile' rate.id %}">q</a>
+      <li><a href="{% url 'recommender:rater_profile' rate.id %}">{{rate.name}}</a>
         {{rate.rating}}/5</li>
     {% endfor %}
     </ol>
+        <ul id='main'>
+          <li class="main"><a href='/recommender/'>Home</a></li>
+          <li class="main"><a href='/recommender/movie_list'>Movies</a></li>
+          <li class="main"><a href='/recommender/rater_list'>Raters</a></li>
+          <li class="main"><a href='/recommender/top_20'>Top 20</a></li>
+          <div></div>
+        </ul>
     <footer><a href='/recommender'>Return to index</a></footer>
   </body>
 </html>
