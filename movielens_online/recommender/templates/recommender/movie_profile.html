@@ -16,7 +16,7 @@
     <h3>Reviews</h3>
     <ol>
     {% for rate in all_movie_rating %}
-      <li><a href="{% url 'recommender:rater_profile' rate.rater.id %}">{{ rate.rater.name }}</a>
+      <li><a href="{% url 'recommender:rater_profile' rate.rater.user.id %}">{{ rate.rater.name }}</a>
         {{rate.rating}}/5</li>
     {% endfor %}
     </ol>
